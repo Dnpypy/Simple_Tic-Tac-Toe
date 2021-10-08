@@ -12,6 +12,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Simple Tic-Tac-Toe/task" />
+            <option value="$PROJECT_DIR$/Topics/Calling a method/Area of parallelogram" />
+            <option value="$PROJECT_DIR$/Topics/Calling a method/Call me awesome" />
+            <option value="$PROJECT_DIR$/Topics/Calling a method/Theory" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Check a number is positive" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Chocolate" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Healthy sleep" />
@@ -21,6 +25,23 @@
             <option value="$PROJECT_DIR$/Topics/Conditional statement/The army of units" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Theory" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Triangle" />
+            <option value="$PROJECT_DIR$/Topics/Increment and decrement/Decrement all" />
+            <option value="$PROJECT_DIR$/Topics/Increment and decrement/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Arithmetic expression" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Desks" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Difference of times" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/First digit" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Good rest on vacation" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/How many nuts each squirrel will get" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Next even number" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Reading integer numbers" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Reversing" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Reversing input numbers" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Snail" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Squirrels and nuts" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Tens digit" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/The sum of digits" />
+            <option value="$PROJECT_DIR$/Topics/Integer types and operations/Theory" />
             <option value="$PROJECT_DIR$/Topics/String/Check burgs" />
             <option value="$PROJECT_DIR$/Topics/String/Check prefix ignoring the case" />
             <option value="$PROJECT_DIR$/Topics/String/Comparing strings ignoring whitespaces" />
