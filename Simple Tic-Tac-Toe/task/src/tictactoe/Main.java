@@ -1,7 +1,9 @@
 package tictactoe;
 
 import java.util.Scanner;
-
+//1. Turn input string toCharArray().
+//2. Create a 3*3 char array(), then fill it with a double for loop, you can fit that | in your for loop as well.
+//3. And don't forget to put that -------- before and after your for loops.
 public class Main {
     public static void main(String[] args) {
         // write your code here
