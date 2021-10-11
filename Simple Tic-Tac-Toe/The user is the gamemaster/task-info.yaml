@@ -259,19 +259,8 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/projects/48/stages/256/implement#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #3
-
-    Can&#39;t parse the field! Check if you output a field in format like in the example.
-
-    Please find below the output of your program during this failed test.
-    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
-
-    ---
-
-    Enter cells:
-    &gt; _________
-  time: Fri, 08 Oct 2021 13:06:33 UTC
+  message: Congratulations!
+  time: Mon, 11 Oct 2021 14:02:54 UTC
 record: -1
