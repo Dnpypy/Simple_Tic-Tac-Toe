@@ -3,14 +3,15 @@ package tictactoe;
 import java.util.Scanner;
 
 public class Main {
+
+    private static final String line = "---------";
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         // write your code here
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter cells:");
         String s = scanner.next().trim();
         s = s.replace("", " ");
-
-        final String line = "---------";
         char[] aChr = s.toCharArray();
 
         System.out.println(line);
