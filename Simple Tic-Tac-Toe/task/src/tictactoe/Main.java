@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static char[] aChr;
     private static final String line = "---------";
     private static Scanner scanner = new Scanner(System.in);
 
@@ -11,8 +12,12 @@ public class Main {
         // write your code here
         System.out.println("Enter cells:");
         String s = scanner.next().trim();
+        ticTable(s);
+    }
+
+    static void ticTable(String s) {
         s = s.replace("", " ");
-        char[] aChr = s.toCharArray();
+        aChr = s.toCharArray();
 
         System.out.println(line);
         for(int i = 0; i < aChr.length; i++) {
