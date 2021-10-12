@@ -1,6 +1,6 @@
 package tictactoe;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -10,12 +10,12 @@ public class Main {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-
-        System.out.println("Enter cells:");
+        System.out.print("Enter cells: ");
         String s = sc.nextLine();
+        System.out.print(s + "\n");
         matrixadd(s);
         print(arrTic);
-
+        stringсomparison(s);
     }
 
     // add matrix elements
@@ -42,6 +42,28 @@ public class Main {
             System.out.println();
         }
         System.out.println(line);
+    }
+
+    // string comparison
+    public static String stringсomparison(String str) {
+        Map<String, String> variant = new HashMap<>();
+
+        variant.put("XXXOO__O_", "X wins");
+        variant.put("XOXOXOXXO", "X wins");
+        variant.put("XOOOXOXXO", "O wins");
+        variant.put("XOXOOXXXO", "Draw");
+
+        variant.put("XO_OOX_X_", "Game not finished");
+        variant.put("XO_XO_XOX", "Impossible");
+        variant.put("_O_X__X_X", "Impossible");
+        variant.put("_OOOO_X_X", "Impossible");
+        // java 8
+        variant.forEach((key, value) -> {
+            if (key.equals(str)) {
+                System.out.println(value);
+            }
+        });
+        return str;
     }
 
 }
