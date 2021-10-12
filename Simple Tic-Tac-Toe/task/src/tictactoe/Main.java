@@ -4,33 +4,44 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static char[] aChr;
     private static final String line = "---------";
-    private static Scanner scanner = new Scanner(System.in);
+    private static final int SIZE = 3;
+    private static final char[][] arrTic = new char[SIZE][SIZE];
+    private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // write your code here
+
         System.out.println("Enter cells:");
-        String s = scanner.next().trim();
-        ticTable(s);
+        String s = sc.nextLine();
+        matrixadd(s);
+        print(arrTic);
+
     }
 
-    static void ticTable(String s) {
-        s = s.replace("", " ");
-        aChr = s.toCharArray();
-
-        System.out.println(line);
-        for(int i = 0; i < aChr.length; i++) {
-            if(i == 6 || i == 12 || i == 18) {
-                System.out.print(" |");
-                System.out.println();
+    // add matrix elements
+    public static String matrixadd(String str) {
+        int p = 0;
+        for(int i = 0; i < SIZE; i++) {
+            for(int j = 0; j < SIZE; j++) {
+                arrTic[i][j] = str.charAt(p);
+                p++;
             }
-            if(i == 0 || i == 6 || i == 12) {
-                System.out.print("|");
-            }
-            System.out.print(i < aChr.length - 1 ? aChr[i] : "");
-
         }
-        System.out.print(line);
+        return str;
     }
+
+    // print matrix
+    public static void print(char[][] arrChar) {
+        System.out.println(line);
+        for (int f = 0; f < SIZE; f++) {
+            System.out.print("| ");
+            for (int j = 0; j < SIZE; j++) {
+                System.out.print(arrChar[f][j] + " ");
+            }
+            System.out.print("|");
+            System.out.println();
+        }
+        System.out.println(line);
+    }
+
 }
