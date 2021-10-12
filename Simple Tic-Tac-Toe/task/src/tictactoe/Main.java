@@ -15,7 +15,7 @@ public class Main {
         System.out.print(s + "\n");
         matrixadd(s);
         print(arrTic);
-        stringсomparison(s);
+        checkingStatus(s);
     }
 
     // add matrix elements
@@ -45,7 +45,7 @@ public class Main {
     }
 
     // string comparison
-    public static String stringсomparison(String str) {
+    public static String checkingStatus(String str) {
         Map<String, String> variant = new HashMap<>();
 
         variant.put("XXXOO__O_", "X wins");
