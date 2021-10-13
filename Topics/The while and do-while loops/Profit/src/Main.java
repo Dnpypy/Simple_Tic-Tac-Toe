@@ -3,6 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // write your code here
+
         Scanner sc = new Scanner(System.in);
         double m = sc.nextDouble(); // money
         double p = sc.nextDouble(); // percent
