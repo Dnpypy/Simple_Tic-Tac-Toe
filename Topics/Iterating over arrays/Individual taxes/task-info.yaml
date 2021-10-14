@@ -15,18 +15,18 @@ feedback_link: https://hyperskill.org/learn/step/3795#comment
 status: Failed
 feedback:
   message: |
-    Failed test #2 of 9. Maybe you forgot about zeros as incomes or zeros as percents?
+    Failed test #3 of 9. Maybe you forgot about zeros as incomes or zeros as percents?
 
     This is a sample test from the problem statement!
 
     Test input:
-    2
-    50 100
-    10 10
+    3
+    50 100 300
+    100 20 0
     Correct output:
-    2
+    1
 
     Your code output:
-    27
-  time: Thu, 14 Oct 2021 15:02:49 UTC
+    3
+  time: Thu, 14 Oct 2021 15:25:00 UTC
 record: -1

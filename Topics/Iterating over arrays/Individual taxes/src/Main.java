@@ -50,19 +50,28 @@ class Main {
         int max = 0;
         int hundred = 100;
         int year = 365;
+        // чет нечет
+        int odd = 1; // чет
         for(int i = 0; i < count; i++){
-            itog[i] = (int) arr[i] * (percent[i] * hundred / percent[i]) / year;
-        }
-        for(int i = 0; i < count; i++){
-            if(i < count - 1 ) {
-                if (itog[i] > itog[i + 1]){
-                    max = itog[i];
-                } else {
-                    max = itog[i + 1];
-                }
+            if (percent[i] == 0) {
+                percent[i] = 1;
+                itog[i] = (int) arr[i] * (percent[i] * hundred / percent[i]) / year;
+            } else {
+                itog[i] = (int) arr[i] * (percent[i] * hundred / percent[i]) / year;
             }
         }
-        return max;
+        // не правильный возврат
+
+        for(int i = 0; i < count; i++){
+            //if(i < count - 1 ) {
+                if (max < itog[i]) {
+                //if (itog[i] > itog[i + 1]){
+                    max = itog[i];
+                    odd = i + 1;
+                }
+            //}
+        }
+        return odd;
     }
 
 }
