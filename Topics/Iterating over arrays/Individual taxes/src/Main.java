@@ -1,16 +1,13 @@
 import java.util.*;
 
 class Main {
-    // 100 000 × 4,8% / 365 = 13,15 Р
-    // 50 * 10% / 365 =
-    // 100 * 10% / 365 =
-    //50 * (10*100/10) / 365 =
+
     public static Scanner sc = new Scanner(System.in);
-    public static int[] arrN;
-    public static int[] taxes;
+    public static double[] arrN;
+    public static double[] taxes;
     public static int count = 0;     // count company
-    public static int incYear = 0;   // contains the yearly incomes of each company
-    public static int percent = 0;  // individual taxes for each company in percent of the company's income
+    public static double incYear = 0.0;   // contains the yearly incomes of each company
+    public static double percent = 0.0;  // individual taxes for each company in percent of the company's income
 
     //All numbers are integers from 0 to 100 inclusive.
 
@@ -27,49 +24,44 @@ class Main {
         }
     }
 
-    public static int[] yearIncome() {
-        arrN = new int[count];
+    public static double[] yearIncome() {
+        arrN = new double[count];
         for (int i = 0; i < count; i++) {
-            incYear = sc.nextInt();
+            incYear = sc.nextDouble();
             arrN[i] = incYear;
         }
         return Arrays.copyOf(arrN, arrN.length);
     }
-    // второй метод можно не писать заполнить одним методом все массивы ! попробовать
-    public static int[] percentTaxes() {
-        taxes = new int[count];
+
+    public static double[] percentTaxes() {
+        taxes = new double[count];
         for (int i = 0; i < count; i++) {
-            percent = sc.nextInt();
+            percent = sc.nextDouble();
             taxes[i] = percent;
         }
         return Arrays.copyOf(taxes, taxes.length);
     }
+    // for the calculation this may help: (income * tax) / 100
+    public static int countingPercent(double[] arr, double[] percent) {
+        double[] itog = new double[count];
+        double max = -9999.0;
+        double hundred = 100.0;
 
-    public static int countingPercent(int[] arr, int[] percent) {
-        int[] itog = new int[count];
-        int max = 0;
-        int hundred = 100;
-        int year = 365;
-        // чет нечет
-        int odd = 1; // чет
+        int odd = 0;
         for(int i = 0; i < count; i++){
-            if (percent[i] == 0) {
-                percent[i] = 1;
-                itog[i] = (int) arr[i] * (percent[i] * hundred / percent[i]) / year;
+            if (percent[i] == 0.0) {
+                percent[i] = 0.01;
+                itog[i] = arr[i] /  hundred * percent[i];
             } else {
-                itog[i] = (int) arr[i] * (percent[i] * hundred / percent[i]) / year;
+                itog[i] = arr[i] /  hundred * percent[i];
             }
         }
-        // не правильный возврат
 
         for(int i = 0; i < count; i++){
-            //if(i < count - 1 ) {
                 if (max < itog[i]) {
-                //if (itog[i] > itog[i + 1]){
                     max = itog[i];
                     odd = i + 1;
                 }
-            //}
         }
         return odd;
     }

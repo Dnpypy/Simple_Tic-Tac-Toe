@@ -11,10 +11,6 @@ files:
         }
     }
   learner_created: false
-feedback_link: https://hyperskill.org/learn/step/3795#comment
-status: Failed
-feedback:
-  message: |
-    Failed test #8 of 9. Maybe you forgot about zeros as incomes or zeros as percents?
-  time: Fri, 15 Oct 2021 13:33:29 UTC
+feedback_link: https://hyperskill.org/learn/step/3820#comment
+status: Unchecked
 record: -1
