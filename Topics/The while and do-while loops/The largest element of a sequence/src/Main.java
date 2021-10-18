@@ -4,7 +4,7 @@ class Main {
     public static void main(String[] args) {
         // put your code here
         Scanner sc = new Scanner(System.in);
-        String result;
+        int max = 0;
         int n;
 
         while (sc.hasNext()) {
@@ -17,9 +17,8 @@ class Main {
             if (n < 0) {
                 n = -1 * n;
             }
-            result = n % 2 == 0 ? "even" : "odd";
-            System.out.println(result);
+            max = max < n ? n : max;
         }
-
+        System.out.print(max);
     }
 }
