@@ -9,6 +9,7 @@ class Main {
     public static double incYear = 0.0;   // contains the yearly incomes of each company
     public static double percent = 0.0;  // individual taxes for each company in percent of the company's income
 
+
     //All numbers are integers from 0 to 100 inclusive.
 
     public static void main(String[] args) {
@@ -41,29 +42,20 @@ class Main {
         }
         return Arrays.copyOf(taxes, taxes.length);
     }
-    // for the calculation this may help: (income * tax) / 100
+
     public static int countingPercent(double[] arr, double[] percent) {
         double[] itog = new double[count];
-        double max = -9999.0;
-        double hundred = 100.0;
-
         int odd = 0;
-        for(int i = 0; i < count; i++){
-            if (percent[i] == 0.0) {
-                percent[i] = 0.01;
-                itog[i] = arr[i] /  hundred * percent[i];
-            } else {
-                itog[i] = arr[i] /  hundred * percent[i];
+        double max = 0;
+        final double hundred = 100.0;
+        for (int i = 0; i < count; i++) {
+            itog[i] = arr[i] * percent[i] / hundred;
+            if (max < itog[i]) {
+                max = itog[i];
+                odd = i;
             }
         }
-
-        for(int i = 0; i < count; i++){
-                if (max < itog[i]) {
-                    max = itog[i];
-                    odd = i + 1;
-                }
-        }
-        return odd;
+        return odd + 1;
     }
 
 }
