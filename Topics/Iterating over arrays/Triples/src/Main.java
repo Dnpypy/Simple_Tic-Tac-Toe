@@ -1,49 +1,23 @@
-import java.util.Scanner;
+import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int neW = sc.nextInt();
-        int n = 0;
-        int second = 0;
-//        boolean t = false;
-//        if (neW > 9 && neW < 100) {
-//            n = neW / 10;   // 61 / 10 = 6
-//            neW = n;
-//            second = neW % 10;  // 61 % 10 = 1
-//            t = true;
-//        }
-
-        int[] arr = new int[neW];
-        int count;
-        int j = 0;
-
-        //while (j != neW) {
-        while (sc.hasNext()) {
-//            if (j < 1 && t == true) {
-//                arr[j] = second;
-//                j++;
-//            }
-
-            count = sc.nextInt();
-            arr[j] = count;
-            j++;
+        Scanner input = new Scanner(System.in);
+        int size = input.nextInt();
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = input.nextInt();
         }
 
-        int asc = 0;
         int triple = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-
-            if (arr[i] != arr[arr.length - 1]) {
-                if (arr[i] < arr[i + 1] && arr[i + 1] == arr[i] + 1 ) {
-                    asc++;
-                    if (asc % 2 == 0) {
-                        triple++;
-                    }
-                }
+        for (int i = 1; i < size; i++) {
+            if (i + 1 < size && array[i] - array[i - 1] == 1 && array[i + 1] - array[i] == 1) {
+                triple++;
             }
         }
-        System.out.print(triple);
+        System.out.println(triple);
+        
+        
     }
 }

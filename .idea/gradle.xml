@@ -8,7 +8,6 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -55,11 +54,14 @@
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Alphabetical order" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Count how many times a number occurs" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Individual taxes" />
+            <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Sum array elements greater than a value" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/The index of the first max in an array" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/The minimum value of an array" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/The sum of array elements" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Theory" />
             <option value="$PROJECT_DIR$/Topics/Iterating over arrays/Triples" />
+            <option value="$PROJECT_DIR$/Topics/Multidimensional array/Symmetric matrix" />
+            <option value="$PROJECT_DIR$/Topics/Multidimensional array/Theory" />
             <option value="$PROJECT_DIR$/Topics/String/Check burgs" />
             <option value="$PROJECT_DIR$/Topics/String/Check prefix ignoring the case" />
             <option value="$PROJECT_DIR$/Topics/String/Comparing strings ignoring whitespaces" />
