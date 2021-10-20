@@ -23,9 +23,9 @@ class Main {
             }
         }
 
-        if (t == true) {
+        if (t) {
             System.out.println("YES");
-        } else if (t == false) {
+        } else if (!t) {
             System.out.println("NO");
         }
 
