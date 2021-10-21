@@ -8,6 +8,7 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="corretto-16" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -35,6 +36,10 @@
             <option value="$PROJECT_DIR$/Topics/Conditional statement/The army of units" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Theory" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Triangle" />
+            <option value="$PROJECT_DIR$/Topics/Errors in programs/Fix the program" />
+            <option value="$PROJECT_DIR$/Topics/Errors in programs/Print the age" />
+            <option value="$PROJECT_DIR$/Topics/Errors in programs/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Errors in programs/What's wrong" />
             <option value="$PROJECT_DIR$/Topics/Increment and decrement/Decrement all" />
             <option value="$PROJECT_DIR$/Topics/Increment and decrement/Theory" />
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/Arithmetic expression" />
