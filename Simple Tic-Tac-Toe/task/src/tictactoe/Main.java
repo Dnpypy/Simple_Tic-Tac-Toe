@@ -12,15 +12,14 @@ public class Main {
     private static String m;
 
     public static void main(String[] args) {
+
         System.out.print("Enter cells: ");
 
-        String s = sc.nextLine();  // "X_X_O____"
-        matrixAdd (s);   // <----"X_X_O____"
-        printMatrix(arrTic);  // <---- | "X_X_O____"\n|
-        //currentBoard(s);
+        String s = sc.nextLine();
+        matrixAdd (s);
+        printMatrix(arrTic);
+
         System.out.print("Enter the coordinates: ");
-        //String n = sc.next();
-        //String m = sc.next();
 
         checkInNumbers(n, m);
         moveFirst(n, m);
@@ -28,10 +27,12 @@ public class Main {
         lastCheckingStatus(s);
     }
 
+    // isNumber? regex
     public static boolean isNumeric(String str) {
-        return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
+        return str.matches("-?\\d+(\\.\\d+)?");
     }
 
+    // checking coordinates, cell occupied, isNumber
     public static void checkInNumbers(String a, String b) {
         int p = 0;
         int f = 0;
@@ -47,7 +48,7 @@ public class Main {
 
                 if ((p > 3 |  f > 3) | (p < 1 | f < 1)) {
                     System.out.println("Coordinates should be from 1 to 3!");
-                } else if (arrTic[p - 1][f - 1] == 'X') {
+                } else if (arrTic[p - 1][f - 1] == 'X' || arrTic[p - 1][f - 1] == 'O') {
                     System.out.println("This cell is occupied! Choose another one!");
                 } else {
                     swiTch = false; // while close
@@ -55,7 +56,6 @@ public class Main {
 
             } else {
                 System.out.println("You should enter numbers!");
-                //System.out.print(false);
             }
 
         }while(swiTch); // while end
@@ -68,6 +68,7 @@ public class Main {
         for(int i = 0; i < SIZE; i++) {
             for(int j = 0; j < SIZE; j++) {
                 arrTic[i][j] = str.charAt(p);
+
                 // replacing _ with spaces
                 if (arrTic[i][j] == '_') {
                     arrTic[i][j] = ' ';
@@ -81,7 +82,6 @@ public class Main {
     // print matrix
     public static void printMatrix(char[][] arrChar) {
         System.out.println(line);
-        //System.out.println(Arrays.deepToString(arrChar)); [[X, _, X], [_, O, _], [_, _, _]]
         for (int f = 0; f < SIZE; f++) {
             System.out.print("| ");
             for (int j = 0; j < SIZE; j++) {
@@ -96,25 +96,17 @@ public class Main {
 
     // moveFirst
     public static char[][] moveFirst(String a, String b) {
-        // a = 3, b = 1;
+
         int d = Integer.parseInt(a);
         int c = Integer.parseInt(b);
-        d = d - 1; // 2
-        c = c - 1; // 0
-        int p = 0;
+        d = d - 1;
+        c = c - 1;
         for(int i = 0; i < SIZE; i++) {
             for(int j = 0; j < SIZE; j++) {
-                //arrTic[i][j] = str.charAt(p);
-                // char replacing _ with spaces
-                if (arrTic[i][j] == arrTic[d][c]){ // 2 0
-                    //  System.out.println(arrTic[i][j] + " arrTic[i][j] ");
-                    // if (arrTic[i][j] == 'X') {
-                    //     System.out.print("This cell is occupied! Choose another one!");
-                    // }
+                if (arrTic[i][j] == arrTic[d][c]){
                     arrTic[d][c] = 'X';
                     break;
                 }
-                p++;
             }
         }
         return arrTic;
@@ -134,7 +126,7 @@ public class Main {
         variant.put("XO_XO_XOX", "Impossible");
         variant.put("_O_X__X_X", "Impossible");
         variant.put("_OOOO_X_X", "Impossible");
-        //
+
         variant.forEach((key, value) -> {
             if (key.equals(str)) {
                 System.out.println(value);
