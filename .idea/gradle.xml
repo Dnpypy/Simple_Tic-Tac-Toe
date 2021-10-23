@@ -8,7 +8,6 @@
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="corretto-16" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -36,6 +35,7 @@
             <option value="$PROJECT_DIR$/Topics/Conditional statement/The army of units" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Theory" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Triangle" />
+            <option value="$PROJECT_DIR$/Topics/Errors in programs/Fix compile-time errors" />
             <option value="$PROJECT_DIR$/Topics/Errors in programs/Fix the program" />
             <option value="$PROJECT_DIR$/Topics/Errors in programs/Print the age" />
             <option value="$PROJECT_DIR$/Topics/Errors in programs/Theory" />
@@ -93,10 +93,12 @@
             <option value="$PROJECT_DIR$/Topics/The for-loop/The roots of an equation" />
             <option value="$PROJECT_DIR$/Topics/The for-loop/The sum of integers from a to b" />
             <option value="$PROJECT_DIR$/Topics/The for-loop/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Collatz conjecture" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Profit" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Squares of natural numbers" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The largest element of a sequence" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The length of the sequence" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The sequence" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The smallest value" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The sum of elements" />
             <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Theory" />
