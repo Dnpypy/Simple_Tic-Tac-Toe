@@ -6,15 +6,20 @@ class Main {
         // put your code here
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int nums = 1;
+        final int t = 3;
+        System.out.print(n + " ");
 
-        if (n % 2 == 0) {
-            nums = (n / 2);
-            System.out.print(nums);
-        } else if (n % 2 != 0) {
-            while (nums != 1) {
-                nums = ((n / 2) * 3) + 1;
-                System.out.print(nums + " ");
+        while (n != 1) {
+            if (n == 1) {
+                n = 1;
+                System.out.print(n);
+                break;
+            } else if ((n & 1) == 1) {
+                n = n * t + 1;
+                System.out.print(n + " ");
+            } else if (n % 2 == 0) {
+                n = n / 2;
+                System.out.print(n + " ");
             }
         }
 
