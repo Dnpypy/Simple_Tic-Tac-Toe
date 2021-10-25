@@ -25,6 +25,8 @@ public class Main {
             checkInNumbers(n, m);
             moveAl(n, m);
             printMatrix(arrTic);
+            // можно добавить проверку доски на заполненость
+            // isBoardFull()....
             lastCheckingStatus(arrTic);
         }
 
@@ -92,7 +94,7 @@ public class Main {
 
     // moveFirst
     public static char[][] movePlayer(String a, String b) {
-        // a = 3, b = 1;
+
         int d = Integer.parseInt(a);
         int c = Integer.parseInt(b);
         d = d - 1; // 2
@@ -100,7 +102,7 @@ public class Main {
         int p = 0;
         for(int i = 0; i < SIZE; i++) {
             for(int j = 0; j < SIZE; j++) {
-                if (arrTic[i][j] == arrTic[d][c]){ // 2 0
+                if (arrTic[i][j] == arrTic[d][c]){
                     arrTic[d][c] = 'X';
                     break;
                 }
@@ -111,33 +113,46 @@ public class Main {
     }
 
     public static char[][] moveAl(String a, String b) {
-        // a = 3, b = 1;
+
         int d = Integer.parseInt(a);
         int c = Integer.parseInt(b);
-        d = d - 1; // 2
-        c = c - 1; // 0
-        int p = 0;
+        d = d - 1;
+        c = c - 1;
+
         for(int i = 0; i < SIZE; i++) {
             for(int j = 0; j < SIZE; j++) {
                 if (arrTic[i][j] == arrTic[d][c]){
                     arrTic[d][c] = 'O';
                     break;
                 }
-                p++;
+
             }
         }
         return arrTic;
     }
 
+    // еще не проверен метод.....
+    public boolean isBoardFull() {
+        boolean isFull = true;
 
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (arrTic[i][j] == ' ') {
+                    isFull = false;
+                }
+            }
+        }
+
+        return isFull;
+    }
     // checkingStatusOver  char[][] arrChar
     public static void lastCheckingStatus(char[][] arrChar) {
         for (int f = 0; f < SIZE; f++) {
             for (int j = 0; j < SIZE; j++) {
-                checkLine += arrTic[f][j];
+                checkLine += arrChar[f][j];
             }
         }
-        //final String a  = "XO       "; //TEST
+        final String a  = "OXXXOXOOX"; // x wins
         final String b  = "XXXOO  O "; // "X wins"
         final String l  = "O  OXOXXX"; // "X wins"
         final String aX = "X   XOO X"; // "X wins"
@@ -145,24 +160,27 @@ public class Main {
         final String eX = "OXOXXX O "; // "X wins"
         final String c  = "OXXOXOXXO"; // "X wins"
         final String bX = "XXOXO XO "; // "X wins"
-        // final String dX = "OOXXOOXXX"; // "X wins"
+        //final String dX = "OXXXOXOOX"; // "X wins"
+        //==final String e = "XOXOOXXXO"; // "X wins"
+
 
        // final String d = "XOOOXOXXO"; // "O wins"
-        final String e = "XOXOOXXXO"; // "Draw"
+
 
         final String f = "XO OOX X "; //"Game not finished"
         final String g = "XO XO XOX"; //"Impossible"
         final String h = " O X  X X"; //"Impossible"
-        final String k = " OOOtr,jn c O X X"; //"Impossible"
+        final String k = " OOOO X X"; //"Impossible"
         final String o = "OXOXXOXOX"; //"Impossible"
         final String p = "XOXOXOOXX"; //"Impossible"
         final String q = "OXXXOOOXX"; //"Impossible"
         final String r = "OXXXXOOOX"; //"Impossible"
+        final String aO = "OXOOXXO X"; //"Impossible"
         switch (checkLine) {
-//            case a:
-//                System.out.println("TEST");
-//                condiGlobal = false;
-//                break;
+            case a:
+                System.out.println("TEST");
+                condiGlobal = false;
+                break;
             case b:
                 System.out.println("X wins");
                 condiGlobal = false;
@@ -182,7 +200,7 @@ public class Main {
 //            case dX:
 //                System.out.println("X wins");
 //                condiGlobal = false;
-//                break;
+     //           break;
             case eX:
                 System.out.println("X wins");
                 condiGlobal = false;
@@ -195,14 +213,14 @@ public class Main {
                 System.out.println("X wins");
                 condiGlobal = false;
                 break;
-//            case d:
-//                System.out.println("O wins");
-//                condiGlobal = false;
-//                break;
-            case e:
-                System.out.println("Draw");
+            case aO:
+                System.out.println("O wins");
                 condiGlobal = false;
                 break;
+//            case e:
+//                System.out.println("Draw");
+//                condiGlobal = false;
+//                break;
             case f:
                 System.out.println("Game not finished");
                 condiGlobal = false;
