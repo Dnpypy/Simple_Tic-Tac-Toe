@@ -26,7 +26,7 @@ public class Main {
             moveAl(n, m);
             printMatrix(arrTic);
             // можно добавить проверку доски на заполненость
-            // isBoardFull()....
+            // arrTic.isBoardFull()....
             lastCheckingStatus(arrTic);
         }
 
