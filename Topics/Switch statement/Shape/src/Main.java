@@ -11,15 +11,19 @@ class Main {
         final int d = 4;
         switch (n) {
             case a:
-                System.out.println("Yes!");
+                System.out.println("You have chosen a square");
                 break;
             case b:
+                System.out.println("You have chosen a circle");
+                break;
             case c:
+                System.out.println("You have chosen a triangle");
+                break;
             case d:
-                System.out.println("No!");
+                System.out.println("You have chosen a rhombus");
                 break;
             default:
-                System.out.println("Unknown number");
+                System.out.println("There is no such shape!");
                 break;
         }
     }

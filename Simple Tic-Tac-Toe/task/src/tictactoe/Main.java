@@ -10,29 +10,30 @@ public class Main {
     private static Scanner sc = new Scanner(System.in);
     private static String n;
     private static String m;
+    private static String checkLine = "";
+    private static boolean condiGlobal = true;
 
     public static void main(String[] args) {
 
-        System.out.print("Enter cells: ");
-
-        String s = sc.nextLine();
-        matrixAdd (s);
+        matrixAdd();
         printMatrix(arrTic);
 
-        System.out.print("Enter the coordinates: ");
+        while (condiGlobal) {
+            checkInNumbers(n, m);
+            movePlayer(n, m);
+            printMatrix(arrTic);
+            checkInNumbers(n, m);
+            moveAl(n, m);
+            printMatrix(arrTic);
+            lastCheckingStatus(arrTic);
+        }
 
-        checkInNumbers(n, m);
-        moveFirst(n, m);
-        printMatrix(arrTic);
-        lastCheckingStatus(s);
     }
 
-    // isNumber? regex
     public static boolean isNumeric(String str) {
-        return str.matches("-?\\d+(\\.\\d+)?");
+        return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
 
-    // checking coordinates, cell occupied, isNumber
     public static void checkInNumbers(String a, String b) {
         int p = 0;
         int f = 0;
@@ -62,26 +63,21 @@ public class Main {
     }
 
 
-    // add matrix elements
-    public static String matrixAdd(String str) {
-        int p = 0;
+    // add matrix elements ' '
+    public static void matrixAdd() {
+
         for(int i = 0; i < SIZE; i++) {
             for(int j = 0; j < SIZE; j++) {
-                arrTic[i][j] = str.charAt(p);
-
-                // replacing _ with spaces
-                if (arrTic[i][j] == '_') {
-                    arrTic[i][j] = ' ';
-                }
-                p++;
+                arrTic[i][j] = ' ';
             }
         }
-        return str;
+
     }
 
     // print matrix
     public static void printMatrix(char[][] arrChar) {
         System.out.println(line);
+        //System.out.println(Arrays.deepToString(arrChar)); [[X, _, X], [_, O, _], [_, _, _]]
         for (int f = 0; f < SIZE; f++) {
             System.out.print("| ");
             for (int j = 0; j < SIZE; j++) {
@@ -95,44 +91,151 @@ public class Main {
     }
 
     // moveFirst
-    public static char[][] moveFirst(String a, String b) {
-
+    public static char[][] movePlayer(String a, String b) {
+        // a = 3, b = 1;
         int d = Integer.parseInt(a);
         int c = Integer.parseInt(b);
-        d = d - 1;
-        c = c - 1;
+        d = d - 1; // 2
+        c = c - 1; // 0
+        int p = 0;
         for(int i = 0; i < SIZE; i++) {
             for(int j = 0; j < SIZE; j++) {
-                if (arrTic[i][j] == arrTic[d][c]){
+                if (arrTic[i][j] == arrTic[d][c]){ // 2 0
                     arrTic[d][c] = 'X';
                     break;
                 }
+                p++;
+            }
+        }
+        return arrTic;
+    }
+
+    public static char[][] moveAl(String a, String b) {
+        // a = 3, b = 1;
+        int d = Integer.parseInt(a);
+        int c = Integer.parseInt(b);
+        d = d - 1; // 2
+        c = c - 1; // 0
+        int p = 0;
+        for(int i = 0; i < SIZE; i++) {
+            for(int j = 0; j < SIZE; j++) {
+                if (arrTic[i][j] == arrTic[d][c]){
+                    arrTic[d][c] = 'O';
+                    break;
+                }
+                p++;
             }
         }
         return arrTic;
     }
 
 
-    // checkingStatusOver
-    public static String lastCheckingStatus(String str) {
-        Map<String, String> variant = new HashMap<>();
-
-        variant.put("XXXOO__O_", "X wins");
-        variant.put("XOXOXOXXO", "X wins");
-        variant.put("XOOOXOXXO", "O wins");
-        variant.put("XOXOOXXXO", "Draw");
-
-        variant.put("XO_OOX_X_", "Game not finished");
-        variant.put("XO_XO_XOX", "Impossible");
-        variant.put("_O_X__X_X", "Impossible");
-        variant.put("_OOOO_X_X", "Impossible");
-
-        variant.forEach((key, value) -> {
-            if (key.equals(str)) {
-                System.out.println(value);
+    // checkingStatusOver  char[][] arrChar
+    public static void lastCheckingStatus(char[][] arrChar) {
+        for (int f = 0; f < SIZE; f++) {
+            for (int j = 0; j < SIZE; j++) {
+                checkLine += arrTic[f][j];
             }
-        });
-        return str;
-    }
+        }
+        //final String a  = "XO       "; //TEST
+        final String b  = "XXXOO  O "; // "X wins"
+        final String l  = "O  OXOXXX"; // "X wins"
+        final String aX = "X   XOO X"; // "X wins"
+        final String cX = " X  XOOX "; // "X wins"
+        final String eX = "OXOXXX O "; // "X wins"
+        final String c  = "OXXOXOXXO"; // "X wins"
+        final String bX = "XXOXO XO "; // "X wins"
+        // final String dX = "OOXXOOXXX"; // "X wins"
 
+       // final String d = "XOOOXOXXO"; // "O wins"
+        final String e = "XOXOOXXXO"; // "Draw"
+
+        final String f = "XO OOX X "; //"Game not finished"
+        final String g = "XO XO XOX"; //"Impossible"
+        final String h = " O X  X X"; //"Impossible"
+        final String k = " OOOtr,jn c O X X"; //"Impossible"
+        final String o = "OXOXXOXOX"; //"Impossible"
+        final String p = "XOXOXOOXX"; //"Impossible"
+        final String q = "OXXXOOOXX"; //"Impossible"
+        final String r = "OXXXXOOOX"; //"Impossible"
+        switch (checkLine) {
+//            case a:
+//                System.out.println("TEST");
+//                condiGlobal = false;
+//                break;
+            case b:
+                System.out.println("X wins");
+                condiGlobal = false;
+                break;
+            case aX:
+                System.out.println("X wins");
+                condiGlobal = false;
+                break;
+            case bX:
+                System.out.println("X wins");
+                condiGlobal = false;
+                break;
+            case cX:
+                System.out.println("X wins");
+                condiGlobal = false;
+                break;
+//            case dX:
+//                System.out.println("X wins");
+//                condiGlobal = false;
+//                break;
+            case eX:
+                System.out.println("X wins");
+                condiGlobal = false;
+                break;
+            case c:
+                System.out.println("X wins");
+                condiGlobal = false;
+                break;
+            case l:
+                System.out.println("X wins");
+                condiGlobal = false;
+                break;
+//            case d:
+//                System.out.println("O wins");
+//                condiGlobal = false;
+//                break;
+            case e:
+                System.out.println("Draw");
+                condiGlobal = false;
+                break;
+            case f:
+                System.out.println("Game not finished");
+                condiGlobal = false;
+                break;
+            case g:
+                System.out.println("Impossible");
+                condiGlobal = false;
+                break;
+            case h:
+                System.out.println("Impossible");
+                condiGlobal = false;
+                break;
+            case k:
+                System.out.println("Impossible");
+                condiGlobal = false;
+                break;
+            case o:
+                System.out.println("Impossible");
+                condiGlobal = false;
+                break;
+            case p:
+                System.out.println("Impossible");
+                condiGlobal = false;
+                break;
+            case q:
+                System.out.println("Impossible");
+                condiGlobal = false;
+                break;
+            case r:
+                System.out.println("Impossible");
+                condiGlobal = false;
+                break;
+            // return checkLine;
+        }
+    }
 }

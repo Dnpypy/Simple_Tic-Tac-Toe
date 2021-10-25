@@ -9,17 +9,26 @@ class Main {
         final int b = 2;
         final int c = 3;
         final int d = 4;
+        final int f = 0;
+
         switch (n) {
+            case f:
+                System.out.println("do not move");
+                break;
             case a:
-                System.out.println("Yes!");
+                System.out.println("move up");
                 break;
             case b:
+                System.out.println("move down");
+                break;
             case c:
+                System.out.println("move left");
+                break;
             case d:
-                System.out.println("No!");
+                System.out.println("move right");
                 break;
             default:
-                System.out.println("Unknown number");
+                System.out.println("error!");
                 break;
         }
     }
