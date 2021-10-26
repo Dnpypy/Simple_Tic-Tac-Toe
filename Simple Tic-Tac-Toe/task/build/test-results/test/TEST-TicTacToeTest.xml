@@ -1,102 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TicTacToeTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-10-26T14:02:31" hostname="ADMIN-PC" time="0.226">
+<testsuite name="TicTacToeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-26T17:31:37" hostname="ADMIN-PC" time="0.79">
   <properties/>
-  <testcase name="start" classname="TicTacToeTest" time="0.226">
-    <failure message="java.lang.AssertionError: Wrong answer in test #1&#10;&#10;Can't parse final result, should contain &quot;Draw&quot;, &quot;X wins&quot; or &quot;O wins&quot;.&#10;Your last line: &quot;draw&quot;&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;---------&#10;|       |&#10;|       |&#10;|       |&#10;---------&#10;Enter the coordinates: &gt; 4 2&#10;Coordinates should be from 1 to 3!&#10;Enter the coordinates: &gt; 4 1&#10;Coordinates should be from 1 to 3!&#10;Enter the coordinates: &gt; 1 4&#10;Coordinates should be from 1 to 3!&#10;Enter the coordinates: &gt; 4 1&#10;Coordinates should be from 1 to 3!&#10;Enter the coordinates: &gt; 2 4&#10;Coordinates should be from 1 to 3!&#10;Enter the coordinates: &gt; 1 1&#10;---------&#10;| X     |&#10;|       |&#10;|       |&#10;---------&#10;Enter the coordinates: &gt; 3 4&#10;Coordinates should be from 1 to 3!&#10;Enter the coordinates: &gt; 1 4&#10;Coordinates should be from 1 to 3!&#10;Enter the coordinates: &gt; 4 3&#10;Coordinates should be from 1 to 3!&#10;Enter the coordinates: &gt; 2 3&#10;---------&#10;| X     |&#10;|     O |&#10;|       |&#10;---------&#10;draw" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #1
-
-Can't parse final result, should contain &quot;Draw&quot;, &quot;X wins&quot; or &quot;O wins&quot;.
-Your last line: &quot;draw&quot;
-
-Please find below the output of your program during this failed test.
-Note that the '&gt;' character indicates the beginning of the input line.
-
----
-
----------
-|       |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 4 2
-Coordinates should be from 1 to 3!
-Enter the coordinates: &gt; 4 1
-Coordinates should be from 1 to 3!
-Enter the coordinates: &gt; 1 4
-Coordinates should be from 1 to 3!
-Enter the coordinates: &gt; 4 1
-Coordinates should be from 1 to 3!
-Enter the coordinates: &gt; 2 4
-Coordinates should be from 1 to 3!
-Enter the coordinates: &gt; 1 1
----------
-| X     |
-|       |
-|       |
----------
-Enter the coordinates: &gt; 3 4
-Coordinates should be from 1 to 3!
-Enter the coordinates: &gt; 1 4
-Coordinates should be from 1 to 3!
-Enter the coordinates: &gt; 4 3
-Coordinates should be from 1 to 3!
-Enter the coordinates: &gt; 2 3
----------
-| X     |
-|     O |
-|       |
----------
-draw
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-</failure>
-  </testcase>
+  <testcase name="start" classname="TicTacToeTest" time="0.79"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 ---------
@@ -104,35 +9,633 @@ Start test 1?[0m
 |       |
 |       |
 ---------
+Enter the coordinates: > 4 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 2 1
+---------
+|       |
+| X     |
+|       |
+---------
+Enter the coordinates: > 1 1
+---------
+| O     |
+| X     |
+|       |
+---------
+Enter the coordinates: > 4 1
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 3 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 1 3
+---------
+| O   X |
+| X     |
+|       |
+---------
+Enter the coordinates: > 3 3
+---------
+| O   X |
+| X     |
+|     O |
+---------
+Enter the coordinates: > 3 1
+---------
+| O   X |
+| X     |
+| X   O |
+---------
+Enter the coordinates: > 4 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 2 3
+---------
+| O   X |
+| X   O |
+| X   O |
+---------
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 2
+---------
+| O X X |
+| X   O |
+| X   O |
+---------
+Enter the coordinates: > 1 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 2
+---------
+| O X X |
+| X O O |
+| X   O |
+---------
+O wins
+?[1;31m
+Start test 2?[0m
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: > 4 1
+Coordinates should be from 1 to 3!
 Enter the coordinates: > 4 2
 Coordinates should be from 1 to 3!
-Enter the coordinates: > 4 1
-Coordinates should be from 1 to 3!
-Enter the coordinates: > 1 4
-Coordinates should be from 1 to 3!
-Enter the coordinates: > 4 1
-Coordinates should be from 1 to 3!
-Enter the coordinates: > 2 4
-Coordinates should be from 1 to 3!
+Enter the coordinates: > 1 3
+---------
+|     X |
+|       |
+|       |
+---------
+Enter the coordinates: > 3 1
+---------
+|     X |
+|       |
+| O     |
+---------
+Enter the coordinates: > 2 3
+---------
+|     X |
+|     X |
+| O     |
+---------
+Enter the coordinates: > 3 2
+---------
+|     X |
+|     X |
+| O O   |
+---------
+Enter the coordinates: > 1 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 3
+---------
+|     X |
+|     X |
+| O O X |
+---------
+X wins
+?[1;31m
+Start test 3?[0m
+---------
+|       |
+|       |
+|       |
+---------
 Enter the coordinates: > 1 1
 ---------
 | X     |
 |       |
 |       |
 ---------
-Enter the coordinates: > 3 4
-Coordinates should be from 1 to 3!
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 1
+---------
+| X     |
+| O     |
+|       |
+---------
+Enter the coordinates: > 3 3
+---------
+| X     |
+| O     |
+|     X |
+---------
 Enter the coordinates: > 1 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 2 3
+---------
+| X     |
+| O   O |
+|     X |
+---------
+Enter the coordinates: > 1 3
+---------
+| X   X |
+| O   O |
+|     X |
+---------
+Enter the coordinates: > 2 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 4 2
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 2 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 2
+---------
+| X   X |
+| O O O |
+|     X |
+---------
+O wins
+?[1;31m
+Start test 4?[0m
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: > 4 3
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 3 3
+---------
+|       |
+|       |
+|     X |
+---------
+Enter the coordinates: > 1 2
+---------
+|   O   |
+|       |
+|     X |
+---------
+Enter the coordinates: > 2 3
+---------
+|   O   |
+|     X |
+|     X |
+---------
+Enter the coordinates: > 1 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 1 3
+---------
+|   O O |
+|     X |
+|     X |
+---------
+Enter the coordinates: > 1 1
+---------
+| X O O |
+|     X |
+|     X |
+---------
+Enter the coordinates: > 4 1
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 4 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 2 1
+---------
+| X O O |
+| O   X |
+|     X |
+---------
+Enter the coordinates: > 3 2
+---------
+| X O O |
+| O   X |
+|   X X |
+---------
+Enter the coordinates: > 2 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 2
+---------
+| X O O |
+| O O X |
+|   X X |
+---------
+Enter the coordinates: > 2 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 1
+---------
+| X O O |
+| O O X |
+| X X X |
+---------
+X wins
+?[1;31m
+Start test 5?[0m
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: > 4 2
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 3 1
+---------
+|       |
+|       |
+| X     |
+---------
+Enter the coordinates: > 1 1
+---------
+| O     |
+|       |
+| X     |
+---------
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 2
+---------
+| O     |
+|   X   |
+| X     |
+---------
+Enter the coordinates: > 4 3
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 2 1
+---------
+| O     |
+| O X   |
+| X     |
+---------
+Enter the coordinates: > 4 4
 Coordinates should be from 1 to 3!
 Enter the coordinates: > 4 3
 Coordinates should be from 1 to 3!
 Enter the coordinates: > 2 3
 ---------
+| O     |
+| O X X |
 | X     |
-|     O |
+---------
+Enter the coordinates: > 2 2
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 2
+---------
+| O     |
+| O X X |
+| X O   |
+---------
+Enter the coordinates: > 3 3
+---------
+| O     |
+| O X X |
+| X O X |
+---------
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 2
+---------
+| O O   |
+| O X X |
+| X O X |
+---------
+Enter the coordinates: > 1 3
+---------
+| O O X |
+| O X X |
+| X O X |
+---------
+X wins
+?[1;31m
+Start test 6?[0m
+---------
+|       |
+|       |
 |       |
 ---------
-draw
+Enter the coordinates: > 4 5
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 1 2
+---------
+|   X   |
+|       |
+|       |
+---------
+Enter the coordinates: > 2 1
+---------
+|   X   |
+| O     |
+|       |
+---------
+Enter the coordinates: > 4 2
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 4 2
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 2 3
+---------
+|   X   |
+| O   X |
+|       |
+---------
+Enter the coordinates: > 2 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 1
+---------
+| O X   |
+| O   X |
+|       |
+---------
+Enter the coordinates: > 1 3
+---------
+| O X X |
+| O   X |
+|       |
+---------
+Enter the coordinates: > 3 2
+---------
+| O X X |
+| O   X |
+|   O   |
+---------
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 1
+---------
+| O X X |
+| O   X |
+| X O   |
+---------
+Enter the coordinates: > 3 2
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 3
+---------
+| O X X |
+| O   X |
+| X O O |
+---------
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 2
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 2
+---------
+| O X X |
+| O X X |
+| X O O |
+---------
+X wins
+?[1;31m
+Start test 7?[0m
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: > 1 2
+---------
+|   X   |
+|       |
+|       |
+---------
+Enter the coordinates: > 2 1
+---------
+|   X   |
+| O     |
+|       |
+---------
+Enter the coordinates: > 4 1
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 1 3
+---------
+|   X X |
+| O     |
+|       |
+---------
+Enter the coordinates: > 2 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 3 1
+---------
+|   X X |
+| O     |
+| O     |
+---------
+Enter the coordinates: > 2 3
+---------
+|   X X |
+| O   X |
+| O     |
+---------
+Enter the coordinates: > 2 2
+---------
+|   X X |
+| O O X |
+| O     |
+---------
+Enter the coordinates: > 1 2
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 2
+---------
+|   X X |
+| O O X |
+| O X   |
+---------
+Enter the coordinates: > 3 3
+---------
+|   X X |
+| O O X |
+| O X O |
+---------
+Enter the coordinates: > 1 1
+---------
+| X X X |
+| O O X |
+| O X O |
+---------
+X wins
+?[1;31m
+Start test 8?[0m
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: > 4 7
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 4 1
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 3 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 4 3
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 4 2
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 2 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 3 2
+---------
+|       |
+|       |
+|   X   |
+---------
+Enter the coordinates: > 2 3
+---------
+|       |
+|     O |
+|   X   |
+---------
+Enter the coordinates: > 1 1
+---------
+| X     |
+|     O |
+|   X   |
+---------
+Enter the coordinates: > 3 1
+---------
+| X     |
+|     O |
+| O X   |
+---------
+Enter the coordinates: > 1 4
+Coordinates should be from 1 to 3!
+Enter the coordinates: > 3 2
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 3
+---------
+| X     |
+|     O |
+| O X X |
+---------
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 2
+---------
+| X O   |
+|     O |
+| O X X |
+---------
+Enter the coordinates: > 1 3
+---------
+| X O X |
+|     O |
+| O X X |
+---------
+Enter the coordinates: > 2 1
+---------
+| X O X |
+| O   O |
+| O X X |
+---------
+Enter the coordinates: > 2 2
+---------
+| X O X |
+| O X O |
+| O X X |
+---------
+X wins
+?[1;31m
+Start test 9?[0m
+---------
+|       |
+|       |
+|       |
+---------
+Enter the coordinates: > 1 1
+---------
+| X     |
+|       |
+|       |
+---------
+Enter the coordinates: > 1 2
+---------
+| X O   |
+|       |
+|       |
+---------
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 2
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 3
+---------
+| X O   |
+|     X |
+|       |
+---------
+Enter the coordinates: > 3 1
+---------
+| X O   |
+|     X |
+| O     |
+---------
+Enter the coordinates: > 2 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 2 3
+This cell is occupied! Choose another one!
+Enter the coordinates: > 3 3
+---------
+| X O   |
+|     X |
+| O   X |
+---------
+Enter the coordinates: > 1 1
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 2
+This cell is occupied! Choose another one!
+Enter the coordinates: > 1 3
+---------
+| X O O |
+|     X |
+| O   X |
+---------
+Enter the coordinates: > 2 1
+---------
+| X O O |
+| X   X |
+| O   X |
+---------
+Enter the coordinates: > 2 2
+---------
+| X O O |
+| X O X |
+| O   X |
+---------
+O wins
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
