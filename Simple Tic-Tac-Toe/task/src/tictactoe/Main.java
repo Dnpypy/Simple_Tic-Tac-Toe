@@ -11,10 +11,14 @@ public class Main {
     private static String n;
     private static String m;
     private static String checkLine = "";
+    private final static cross = 'X';
+    private final static zero = 'O';
     private static boolean condiGlobal = true;
 
     public static void main(String[] args) {
 
+        int player1 = 0;
+        int player2 = 0;
         matrixAdd();
         printMatrix(arrTic);
 
@@ -26,9 +30,11 @@ public class Main {
             moveAl(n, m);
             printMatrix(arrTic);
             // можно добавить проверку доски на заполненость
-            // arrTic.isBoardFull()....
-            lastCheckingStatus(arrTic);
+            if (isBoardFull(arrTic) && true) break;
         }
+        // iswin?
+        //winner
+        lastCheckingStatus(arrTic);
 
     }
 
@@ -79,7 +85,7 @@ public class Main {
     // print matrix
     public static void printMatrix(char[][] arrChar) {
         System.out.println(line);
-        //System.out.println(Arrays.deepToString(arrChar)); [[X, _, X], [_, O, _], [_, _, _]]
+
         for (int f = 0; f < SIZE; f++) {
             System.out.print("| ");
             for (int j = 0; j < SIZE; j++) {
@@ -97,16 +103,16 @@ public class Main {
 
         int d = Integer.parseInt(a);
         int c = Integer.parseInt(b);
-        d = d - 1; // 2
-        c = c - 1; // 0
-        int p = 0;
+        d = d - 1;
+        c = c - 1;
+
         for(int i = 0; i < SIZE; i++) {
             for(int j = 0; j < SIZE; j++) {
                 if (arrTic[i][j] == arrTic[d][c]){
                     arrTic[d][c] = 'X';
                     break;
                 }
-                p++;
+
             }
         }
         return arrTic;
@@ -132,12 +138,12 @@ public class Main {
     }
 
     // еще не проверен метод.....
-    public boolean isBoardFull() {
+    public static boolean isBoardFull(char[][] arrChar) {
         boolean isFull = true;
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (arrTic[i][j] == ' ') {
+                if (arrChar[i][j] == ' ') {
                     isFull = false;
                 }
             }
