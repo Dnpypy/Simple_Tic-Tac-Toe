@@ -458,6 +458,50 @@ files:
 feedback_link: https://hyperskill.org/projects/48/stages/259/implement#comment
 status: Failed
 feedback:
-  message: Failed to launch checking
-  time: Tue, 26 Oct 2021 13:47:58 UTC
+  message: |-
+    Wrong answer in test #1
+
+    Can&#39;t parse final result, should contain &quot;Draw&quot;, &quot;X wins&quot; or &quot;O wins&quot;.
+    Your last line: &quot;draw&quot;
+
+    Please find below the output of your program during this failed test.
+    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
+
+    ---
+
+    ---------
+    |       |
+    |       |
+    |       |
+    ---------
+    Enter the coordinates: &gt; 4 2
+    Coordinates should be from 1 to 3!
+    Enter the coordinates: &gt; 4 1
+    Coordinates should be from 1 to 3!
+    Enter the coordinates: &gt; 1 4
+    Coordinates should be from 1 to 3!
+    Enter the coordinates: &gt; 4 1
+    Coordinates should be from 1 to 3!
+    Enter the coordinates: &gt; 2 4
+    Coordinates should be from 1 to 3!
+    Enter the coordinates: &gt; 1 1
+    ---------
+    | X     |
+    |       |
+    |       |
+    ---------
+    Enter the coordinates: &gt; 3 4
+    Coordinates should be from 1 to 3!
+    Enter the coordinates: &gt; 1 4
+    Coordinates should be from 1 to 3!
+    Enter the coordinates: &gt; 4 3
+    Coordinates should be from 1 to 3!
+    Enter the coordinates: &gt; 2 3
+    ---------
+    | X     |
+    |     O |
+    |       |
+    ---------
+    draw
+  time: Tue, 26 Oct 2021 14:02:31 UTC
 record: 5

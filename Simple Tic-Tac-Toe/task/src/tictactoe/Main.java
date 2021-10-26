@@ -7,10 +7,10 @@ public class Main {
         private static final String line = "---------";
         private static final int SIZE = 3;
         private static final char[][] arrTic = new char[SIZE][SIZE];
-        private static Scanner sc = new Scanner(System.in);
+        private static final Scanner sc = new Scanner(System.in);
         private static String n;
         private static String m;
-        private static String checkLine = "";
+       // private static String checkLine = "";
        // private final static cross = 'X';
       //  private final static zero = 'O';
         private static boolean condiGlobal = true;
@@ -30,14 +30,11 @@ public class Main {
                 moveAl(n, m);
                 printMatrix(arrTic);
                 // check full board
-                if (isBoardFull(arrTic) == true) {
-                    break;
-                }
-
+                isBoardFull(arrTic);
             }
             isWin();
             winner(playerX, playerO);
-            //lastCheckingStatus(arrTic);
+
 
         }
         private static void winner(int playerX, int playerO ){
@@ -157,10 +154,11 @@ public class Main {
                 for (int j = 0; j < SIZE; j++) {
                     if (arrChar[i][j] == ' ') {
                         isFull = false;
+                        break;
                     }
                 }
             }
-
+            condiGlobal = false;
             return isFull;
         }
         // checkingStatusOver  char[][] arrChar
@@ -177,13 +175,13 @@ public class Main {
                 if (arrTic[i][0] == arrTic [i][1] && arrTic [i][0] == arrTic[i][2] && arrTic[i][0] == 'X'){
                     playerX++;
                     if (arrTic[i][0] != ' ') {
-                        return true; //because char '-' is empty
+                        return true; //because char ' ' is empty
                     }
 
                 } else if (arrTic[i][0] == arrTic [i][1] && arrTic [i][0] == arrTic[i][2] && arrTic[i][0] == 'O'){
                     playerO++;
                     if (arrTic[i][0] != ' ') {
-                        return true; //because char '-' is empty
+                        return true; //because char ' ' is empty
                     }
 
                 }
@@ -208,11 +206,15 @@ public class Main {
             if ((arrTic[1][1] == arrTic[0][0] && arrTic[1][1] == arrTic[2][2] && arrTic[1][1] == 'X') ||
                     (arrTic[1][1] == arrTic[0][2] && arrTic[1][1] == arrTic[2][0] && arrTic[1][1] == 'X')) {
                 playerX++;
-                if (arrTic[1][1] != ' ') return true;
+                if (arrTic[1][1] != ' ') {
+                    return true;
+                }
             } else if ((arrTic[1][1] == arrTic[0][0] && arrTic[1][1] == arrTic[2][2] && arrTic[1][1] == 'O') ||
                     (arrTic[1][1] == arrTic[0][2] && arrTic[1][1] == arrTic[2][0] && arrTic[1][1] == 'O')) {
                 playerO++;
-                if (arrTic[1][1] != ' ') return true;
+                if (arrTic[1][1] != ' ') {
+                    return true;
+                }
 
             }
             return false;
